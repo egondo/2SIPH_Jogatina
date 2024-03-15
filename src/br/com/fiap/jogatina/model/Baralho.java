@@ -20,10 +20,6 @@ public class Baralho {
 			monte[j++] = new Carta(i, Naipe.COPAS);
 			monte[j++] = new Carta(i, Naipe.PAUS);
 		}
-		
-		for(Carta c : monte) {
-			System.out.println(c.getValor() + "" + c.getNaipe());
-		}
 	}
 	
 	public Carta comprar() {
@@ -54,7 +50,7 @@ public class Baralho {
 	
 	public void imprime() {
 		for(Carta c : monte) {
-			System.out.println(c.getValor() + "" + c.getNaipe());
+			System.out.println(c);
 		}
 	}
 	
