@@ -7,7 +7,11 @@ public class TesteBaralho {
 		
 		maco.embaralhar();
 		
-		maco.imprime();
+		//maco.imprime();
+		
+		BaralhoTruco b = new BaralhoTruco();
+		b.embaralhar();
+		b.imprime();
 		
 	}
 	

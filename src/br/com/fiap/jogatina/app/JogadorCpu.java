@@ -2,50 +2,16 @@ package br.com.fiap.jogatina.app;
 
 import br.com.fiap.jogatina.model.Carta;
 
-public class JogadorCpu {
-	
-	private Carta[] mao;
-	private int pontos;
-	private int topo;
+public class JogadorCpu extends Jogador {
 	
 	public JogadorCpu(Carta c1, Carta c2) {
-		pontos = 0;
-		topo = 0;		
-		mao = new Carta[15];
-		recebeCarta(c1);
-		recebeCarta(c2);
-	}
-	
-	
-	public int getPontos() {
-		return pontos;
-	}
-	
-	
-	public void recebeCarta(Carta c) {
-		if (c.getValor() > 10)
-			pontos = pontos + 10;
-		else
-			pontos = pontos + c.getValor();
-		
-		mao[topo] = c;
-		topo++;		
+		super(c1, c2);
 	}
 	
 	public boolean querCarta() {
-		if(pontos > 16)
+		if(getPontos() > 16)
 			return false;
 		else
 			return true;
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
 }

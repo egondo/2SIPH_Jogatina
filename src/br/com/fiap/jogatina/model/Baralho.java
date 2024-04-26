@@ -4,8 +4,8 @@ import java.util.Random;
 
 public class Baralho {
 	
-	private Carta[] monte;
-	private int topo;
+	protected Carta[] monte;
+	protected int topo;
 	
 	public Baralho() {
 		//criando o vetor de cartas com 52 pos
@@ -37,10 +37,12 @@ public class Baralho {
 	}
 	
 	public void embaralhar() {
+		int tamanho = this.monte.length;
+		
 		Random rand = new Random();
 		for(int i = 0; i < 200; i++) {
-			int x = rand.nextInt(52);
-			int y = rand.nextInt(52);
+			int x = rand.nextInt(tamanho);
+			int y = rand.nextInt(tamanho);
 			Carta aux = monte[x];
 			monte[x] = monte[y];
 			monte[y] = aux;			
