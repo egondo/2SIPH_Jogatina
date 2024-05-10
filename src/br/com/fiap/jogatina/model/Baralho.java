@@ -2,32 +2,23 @@ package br.com.fiap.jogatina.model;
 
 import java.util.Random;
 
-public class Baralho {
-	
+public abstract class Baralho implements Jogavel {
+
 	protected Carta[] monte;
 	protected int topo;
-	
+
 	public Baralho() {
-		//criando o vetor de cartas com 52 pos
-		monte = new Carta[52];
-		topo = 51;
-		//monte[0] = new Carta(1, Naipe.ESPADAS);
-		//monte[1] = new Carta(2, Naipe.ESPADAS);
-		int j = 0;
-		for(int i = 1; i <= 13; i++) {
-			monte[j++] = new Carta(i, Naipe.ESPADAS);
-			monte[j++] = new Carta(i, Naipe.OUROS);
-			monte[j++] = new Carta(i, Naipe.COPAS);
-			monte[j++] = new Carta(i, Naipe.PAUS);
-		}
+		super();
 	}
-	
+
+	@Override
 	public Carta comprar() {
 		Carta c = monte[topo];
 		topo--;
 		return c;
 	}
-	
+
+	@Override
 	public Carta[] distribuir(int qtd) {
 		Carta[] retorno = new Carta[qtd];
 		for(int i = 0; i < qtd; i++) {
@@ -35,7 +26,8 @@ public class Baralho {
 		}
 		return retorno;
 	}
-	
+
+	@Override
 	public void embaralhar() {
 		int tamanho = this.monte.length;
 		
@@ -48,13 +40,5 @@ public class Baralho {
 			monte[y] = aux;			
 		}		
 	}
-	
-	
-	public void imprime() {
-		for(Carta c : monte) {
-			System.out.println(c);
-		}
-	}
-	
 
 }

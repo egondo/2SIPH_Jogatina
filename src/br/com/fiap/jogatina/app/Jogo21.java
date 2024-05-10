@@ -1,12 +1,14 @@
 package br.com.fiap.jogatina.app;
 
 import br.com.fiap.jogatina.model.Baralho;
+import br.com.fiap.jogatina.model.BaralhoNormal;
 import br.com.fiap.jogatina.model.Carta;
+import br.com.fiap.jogatina.model.Jogavel;
 
 public class Jogo21 {
 
 	public static void main(String[] args) {
-		Baralho b = new Baralho();
+		Baralho b = new BaralhoNormal();
 		b.embaralhar();
 		
 		Jogador j1 = new Jogador(b.comprar(), b.comprar());

@@ -1,6 +1,6 @@
 package br.com.fiap.jogatina.model;
 
-public class BaralhoTruco extends Baralho {
+public class BaralhoTruco extends BaralhoNormal {
 
 	public BaralhoTruco() {
 

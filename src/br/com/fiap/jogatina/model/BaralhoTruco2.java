@@ -1,6 +1,6 @@
 package br.com.fiap.jogatina.model;
 
-public class BaralhoTruco2 extends Baralho {
+public class BaralhoTruco2 extends BaralhoNormal {
 
 	@Override
 	public Carta comprar() {
